@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { HeadFC, PageProps, navigate } from "gatsby";
 import Button from "../components/Button";
 import "./book-form.scss";
+import { base_url } from "../config";
 
 interface BookFormProps {
   location: {
@@ -34,7 +35,7 @@ const BookForm: React.FC<BookFormProps> = ({ location }) => {
 
   useEffect(() => {
     if (bookId) {
-      fetch(`http://127.0.0.1:8000/api/books/${bookId}`)
+      fetch(`${base_url}/api/books/${bookId}`)
         .then((response) => response.json())
         .then((data) => setFormData(data.book))
         .catch((error) => console.error(error));
@@ -78,7 +79,7 @@ const BookForm: React.FC<BookFormProps> = ({ location }) => {
 
       if (bookId) {
         // Update book by ID
-        fetch(`http://127.0.0.1:8000/api/books/${bookId}`, {
+        fetch(`${base_url}/api/books/${bookId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -97,7 +98,7 @@ const BookForm: React.FC<BookFormProps> = ({ location }) => {
           });
       } else {
         // Create a new book
-        fetch("http://127.0.0.1:8000/api/books", {
+        fetch(`${base_url}/api/books`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
