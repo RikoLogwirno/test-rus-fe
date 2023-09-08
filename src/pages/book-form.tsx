@@ -194,3 +194,5 @@ const BookForm: React.FC<BookFormProps> = ({ location }) => {
 };
 
 export default BookForm;
+
+export const Head: HeadFC = () => <title>Riko Logwirno | Test RUS FE</title>;
