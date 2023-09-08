@@ -1,0 +1,15 @@
+body {
+  color: #232129;
+  padding: 96px;
+  font-family: -apple-system, Roboto, sans-serif, serif;
+}
+
+.page-styles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .button-add {
+    margin-bottom: 20px;
+  }
+}

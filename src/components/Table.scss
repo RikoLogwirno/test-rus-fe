@@ -1,0 +1,51 @@
+.table-container {
+  display: grid;
+  gap: 20px;
+}
+
+.filter-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  thead {
+    position: sticky;
+  }
+}
+
+th {
+  padding: 20px;
+  cursor: pointer;
+  background-color: #eee;
+  text-align: center;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  &:hover {
+    background-color: #f5f5f5;
+  }
+  &:active {
+    background-color: #ddd;
+  }
+}
+
+tr {
+  cursor: pointer;
+  td {
+    padding: 15px 5px;
+    border-bottom: 1px solid #ccc;
+    &.delete {
+      cursor: pointer;
+      color: red;
+      text-align: center;
+    }
+  }
+  &:hover td {
+    background-color: #fafafa;
+  }
+}
